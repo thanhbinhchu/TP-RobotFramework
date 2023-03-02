@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.8.5 on darwin)" generated="20230302 17:51:00.589" rpa="false" schemaversion="3">
+<suite id="s1" name="Contactus" source="/Users/thanhbinh/Documents/DeVops/24:02 Robot framework/TP/TP RobotFramework/binhtest/robot/contactus.robot">
+<test id="s1-t1" name="Submit contact form" line="10">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL bug academy}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230302 17:51:00.979" level="INFO">Opening browser 'Chrome' to base url 'https://academybugs.com/contact-us-form/'.</msg>
+<status status="PASS" starttime="20230302 17:51:00.979" endtime="20230302 17:51:06.497"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>timeout = 5</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20230302 17:51:06.498" endtime="20230302 17:51:06.523"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:first_name</arg>
+<arg>string</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230302 17:51:06.524" level="INFO">Typing text 'string' into text field 'id:first_name'.</msg>
+<status status="PASS" starttime="20230302 17:51:06.523" endtime="20230302 17:51:06.809"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:last_name</arg>
+<arg>string</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230302 17:51:06.810" level="INFO">Typing text 'string' into text field 'name:last_name'.</msg>
+<status status="PASS" starttime="20230302 17:51:06.810" endtime="20230302 17:51:06.914"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:email</arg>
+<arg>email@gmail.fr</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230302 17:51:06.916" level="INFO">Typing text 'email@gmail.fr' into text field 'name:email'.</msg>
+<status status="PASS" starttime="20230302 17:51:06.915" endtime="20230302 17:51:07.055"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:subject</arg>
+<arg>Strings</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230302 17:51:07.056" level="INFO">Typing text 'Strings' into text field 'name:subject'.</msg>
+<status status="PASS" starttime="20230302 17:51:07.056" endtime="20230302 17:51:07.173"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:input-message</arg>
+<arg>text</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230302 17:51:07.174" level="INFO">Typing text 'text' into text field 'id:input-message'.</msg>
+<status status="PASS" starttime="20230302 17:51:07.174" endtime="20230302 17:51:07.280"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:submit-contact-form</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230302 17:51:07.281" level="INFO">Clicking button 'id:submit-contact-form'.</msg>
+<status status="PASS" starttime="20230302 17:51:07.280" endtime="20230302 17:51:07.392"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230302 17:51:10.394" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230302 17:51:07.392" endtime="20230302 17:51:10.394"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Contact Us Form – AcademyBugs.com</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230302 17:51:10.407" level="INFO">Page title is 'Contact Us Form – AcademyBugs.com'.</msg>
+<status status="PASS" starttime="20230302 17:51:10.395" endtime="20230302 17:51:10.407"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230302 17:51:10.407" endtime="20230302 17:51:10.554"/>
+</kw>
+<status status="PASS" starttime="20230302 17:51:00.977" endtime="20230302 17:51:10.555"/>
+</test>
+<doc>A test suite with a single test for valid login.
+
+This test has a workflow that is created using keywords in
+the imported resource file.</doc>
+<status status="PASS" starttime="20230302 17:51:00.591" endtime="20230302 17:51:10.557"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Contactus">Contactus</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
