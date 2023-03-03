@@ -42,7 +42,21 @@ Input Wrong Password-Orange
 
 Submit Credentials
     Click Button    //*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button
-    
+
+Check Message Error     
+
+    Element Should Be Visible    //*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/div/div[1]/div[1]
+    Element Should Contain    //*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/div/div[1]/div[1]/p    Invalid credentials
+
+Check Message Username is required
+
+    Element Should Be Visible    //*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/span
+    Element Should Contain    //*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/span    Require
+
+Check Message Password is required
+
+    Element Should Be Visible    //*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/span
+    Element Should Contain    //*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/span    Require
 
 Home Page Should Be Open
     Location Should Be    ${URL HOMEPAGE}
@@ -65,22 +79,23 @@ NavBar PIM
 NavBar Log Out
     Click Element    //*[@id="app"]/div[1]/div[1]/header/div[1]/div[2]/ul/li/span/p
     Click Element    //*[@id="app"]/div[1]/div[1]/header/div[1]/div[2]/ul/li/ul/li[4]/a
+
+Search Employee
+    Location Should Be    https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewEmployeeList
+    Sleep    10
+
+    Input Text    //*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[1]/div/div[2]/div/div/input    Bill
+    
+    Click Button    //*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[2]/button[2]
 Add Employee
     Location Should Be    https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewEmployeeList
     
-
     Sleep    10
-    # Element Should Be Visible    class:oxd-button oxd-button--medium oxd-button--secondary    timeout = 10
-    
-    # Click Button    xpath:/html/body/div/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[2]/button[2]
-
     Click Element    //*[@id="app"]/div[1]/div[1]/header/div[2]/nav/ul/li[3]/a
 
     Location Should Be    https://opensource-demo.orangehrmlive.com/web/index.php/pim/addEmployee
 
     Sleep    10
-    # Click Button    xpath:/html/body/div/div[1]/div[2]/div[2]/div/div[2]/div[1]/button
-    # Click Button    //button[@value = "Add"]
 
     Input Text    name:firstName    Alten
     Input Text    name:middleName    Societe

@@ -5,6 +5,7 @@ Documentation     A test suite with a single test for valid login.
 ...               the imported resource file.
 Resource          resource-orange.robot
 Library    Telnet
+Library    XML
 
 *** Test Cases ***
 Submit login with username&password
@@ -25,6 +26,10 @@ Submit login with wrong username
     Input Password-Orange
     Submit Credentials
 
+    Location Should Be    ${URL LOGIN}
+    Sleep    3
+    Check Message Error
+
     Close Browser
 
 Submit login with wrong password
@@ -34,13 +39,25 @@ Submit login with wrong password
     Input Wrong Password-Orange
     Submit Credentials
 
+    Location Should Be    ${URL LOGIN}
+    Sleep    3
+    Check Message Error
+
+
     Close Browser
 
 Submit login without username
     Open Browser To Login Page
     Wait Until Element Is Not Visible    timeout = 5
+
     Input Password-Orange
+    
     Submit Credentials
+
+    Location Should Be    ${URL LOGIN}
+    Sleep    3
+    
+    Check Message Username is required
 
     Close Browser
 
@@ -49,6 +66,11 @@ Submit login without password
     Wait Until Element Is Not Visible    timeout = 5
     Input Username
     Submit Credentials
+
+    Location Should Be    ${URL LOGIN}
+    Sleep    3
+    
+    Check Message Password is required
 
     Close Browser
 
@@ -80,6 +102,21 @@ Add Employee in Page PIM
     Wait Until Element Is Not Visible    timeout = 5
 
     Add Employee
+
+    Close Browser
+Search Emloyee in Page PIM
+    Open Browser To Login Page   
+    Wait Until Element Is Not Visible    timeout = 5
+    Input Username
+    Input Password-Orange
+    Submit Credentials
+    Sleep  3
+    Title Should Be    OrangeHRM
+    
+    NavBar PIM
+    Wait Until Element Is Not Visible    timeout = 5
+    
+    Search Employee
 
     Close Browser
 
