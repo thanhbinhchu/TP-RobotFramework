@@ -60,6 +60,8 @@ Dashboard Admin
     Submit Credentials
     Sleep  3
     Title Should Be    OrangeHRM
+
+    Check NavBar
     
     NavBar Admin
 

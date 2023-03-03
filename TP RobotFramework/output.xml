@@ -1,92 +1,712 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.8.5 on darwin)" generated="20230302 17:51:00.589" rpa="false" schemaversion="3">
-<suite id="s1" name="Contactus" source="/Users/thanhbinh/Documents/DeVops/24:02 Robot framework/TP/TP RobotFramework/binhtest/robot/contactus.robot">
-<test id="s1-t1" name="Submit contact form" line="10">
+<robot generator="Robot 6.0.2 (Python 3.8.5 on darwin)" generated="20230303 11:34:52.671" rpa="false" schemaversion="3">
+<suite id="s1" name="App" source="/Users/thanhbinh/Documents/DeVops/24:02 Robot framework/TP/TP-RobotFramework/TP RobotFramework/appointment/app.robot">
+<test id="s1-t1" name="Submit login with username&amp;password" line="10">
+<kw name="Open Browser To Home Page" library="resource-app">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>${URL bug academy}</arg>
+<arg>${URL CURA}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230302 17:51:00.979" level="INFO">Opening browser 'Chrome' to base url 'https://academybugs.com/contact-us-form/'.</msg>
-<status status="PASS" starttime="20230302 17:51:00.979" endtime="20230302 17:51:06.497"/>
+<msg timestamp="20230303 11:34:52.951" level="INFO">Opening browser 'Chrome' to base url 'https://katalon-demo-cura.herokuapp.com/'.</msg>
+<status status="PASS" starttime="20230303 11:34:52.950" endtime="20230303 11:34:56.097"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230303 11:34:56.098" endtime="20230303 11:34:56.510"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230303 11:34:56.511" endtime="20230303 11:34:56.511"/>
+</kw>
+<status status="PASS" starttime="20230303 11:34:52.949" endtime="20230303 11:34:56.511"/>
 </kw>
 <kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
 <arg>timeout = 5</arg>
 <doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20230302 17:51:06.498" endtime="20230302 17:51:06.523"/>
+<status status="PASS" starttime="20230303 11:34:56.511" endtime="20230303 11:34:56.527"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id:first_name</arg>
-<arg>string</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230302 17:51:06.524" level="INFO">Typing text 'string' into text field 'id:first_name'.</msg>
-<status status="PASS" starttime="20230302 17:51:06.523" endtime="20230302 17:51:06.809"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name:last_name</arg>
-<arg>string</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230302 17:51:06.810" level="INFO">Typing text 'string' into text field 'name:last_name'.</msg>
-<status status="PASS" starttime="20230302 17:51:06.810" endtime="20230302 17:51:06.914"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name:email</arg>
-<arg>email@gmail.fr</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230302 17:51:06.916" level="INFO">Typing text 'email@gmail.fr' into text field 'name:email'.</msg>
-<status status="PASS" starttime="20230302 17:51:06.915" endtime="20230302 17:51:07.055"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name:subject</arg>
-<arg>Strings</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230302 17:51:07.056" level="INFO">Typing text 'Strings' into text field 'name:subject'.</msg>
-<status status="PASS" starttime="20230302 17:51:07.056" endtime="20230302 17:51:07.173"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id:input-message</arg>
-<arg>text</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230302 17:51:07.174" level="INFO">Typing text 'text' into text field 'id:input-message'.</msg>
-<status status="PASS" starttime="20230302 17:51:07.174" endtime="20230302 17:51:07.280"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>id:submit-contact-form</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20230302 17:51:07.281" level="INFO">Clicking button 'id:submit-contact-form'.</msg>
-<status status="PASS" starttime="20230302 17:51:07.280" endtime="20230302 17:51:07.392"/>
+<kw name="Open LogIn Page" library="resource-app">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="menu-toggle"]/i</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230303 11:34:56.528" level="INFO">Clicking element '//*[@id="menu-toggle"]/i'.</msg>
+<status status="PASS" starttime="20230303 11:34:56.528" endtime="20230303 11:34:56.575"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230302 17:51:10.394" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20230302 17:51:07.392" endtime="20230302 17:51:10.394"/>
+<msg timestamp="20230303 11:34:59.576" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230303 11:34:56.575" endtime="20230303 11:34:59.576"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="sidebar-wrapper"]/ul/li[3]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230303 11:34:59.576" level="INFO">Clicking element '//*[@id="sidebar-wrapper"]/ul/li[3]/a'.</msg>
+<status status="PASS" starttime="20230303 11:34:59.576" endtime="20230303 11:34:59.828"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL LOGIN}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20230303 11:34:59.833" level="INFO">Current location is 'https://katalon-demo-cura.herokuapp.com/profile.php#login'.</msg>
+<status status="PASS" starttime="20230303 11:34:59.828" endtime="20230303 11:34:59.833"/>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
-<arg>Contact Us Form – AcademyBugs.com</arg>
+<arg>CURA Healthcare Service</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20230302 17:51:10.407" level="INFO">Page title is 'Contact Us Form – AcademyBugs.com'.</msg>
-<status status="PASS" starttime="20230302 17:51:10.395" endtime="20230302 17:51:10.407"/>
+<msg timestamp="20230303 11:34:59.839" level="INFO">Page title is 'CURA Healthcare Service'.</msg>
+<status status="PASS" starttime="20230303 11:34:59.834" endtime="20230303 11:34:59.839"/>
+</kw>
+<status status="PASS" starttime="20230303 11:34:56.527" endtime="20230303 11:34:59.839"/>
+</kw>
+<kw name="Input Correct Username" library="resource-app">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:txt-username</arg>
+<arg>${valid username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230303 11:34:59.840" level="INFO">Typing text 'John Doe' into text field 'id:txt-username'.</msg>
+<status status="PASS" starttime="20230303 11:34:59.839" endtime="20230303 11:34:59.985"/>
+</kw>
+<status status="PASS" starttime="20230303 11:34:59.839" endtime="20230303 11:34:59.985"/>
+</kw>
+<kw name="Input Correct Password" library="resource-app">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:txt-password</arg>
+<arg>${valid password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230303 11:34:59.987" level="INFO">Typing text 'ThisIsNotAPassword' into text field 'id:txt-password'.</msg>
+<status status="PASS" starttime="20230303 11:34:59.986" endtime="20230303 11:35:00.125"/>
+</kw>
+<status status="PASS" starttime="20230303 11:34:59.986" endtime="20230303 11:35:00.126"/>
+</kw>
+<kw name="Submit Login" library="resource-app">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:btn-login</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230303 11:35:00.127" level="INFO">Clicking button 'id:btn-login'.</msg>
+<status status="PASS" starttime="20230303 11:35:00.126" endtime="20230303 11:35:00.430"/>
+</kw>
+<status status="PASS" starttime="20230303 11:35:00.126" endtime="20230303 11:35:00.430"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230302 17:51:10.407" endtime="20230302 17:51:10.554"/>
+<status status="PASS" starttime="20230303 11:35:00.430" endtime="20230303 11:35:00.615"/>
 </kw>
-<status status="PASS" starttime="20230302 17:51:00.977" endtime="20230302 17:51:10.555"/>
+<status status="PASS" starttime="20230303 11:34:52.948" endtime="20230303 11:35:00.615"/>
+</test>
+<test id="s1-t2" name="Submit login with wrong username" line="22">
+<kw name="Open Browser To Home Page" library="resource-app">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL CURA}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230303 11:35:00.618" level="INFO">Opening browser 'Chrome' to base url 'https://katalon-demo-cura.herokuapp.com/'.</msg>
+<status status="PASS" starttime="20230303 11:35:00.617" endtime="20230303 11:35:03.714"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230303 11:35:03.715" endtime="20230303 11:35:04.142"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230303 11:35:04.142" endtime="20230303 11:35:04.143"/>
+</kw>
+<status status="PASS" starttime="20230303 11:35:00.617" endtime="20230303 11:35:04.143"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>timeout = 5</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20230303 11:35:04.143" endtime="20230303 11:35:04.156"/>
+</kw>
+<kw name="Open LogIn Page" library="resource-app">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="menu-toggle"]/i</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230303 11:35:04.158" level="INFO">Clicking element '//*[@id="menu-toggle"]/i'.</msg>
+<status status="PASS" starttime="20230303 11:35:04.157" endtime="20230303 11:35:04.203"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230303 11:35:07.204" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230303 11:35:04.203" endtime="20230303 11:35:07.204"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="sidebar-wrapper"]/ul/li[3]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230303 11:35:07.205" level="INFO">Clicking element '//*[@id="sidebar-wrapper"]/ul/li[3]/a'.</msg>
+<status status="PASS" starttime="20230303 11:35:07.204" endtime="20230303 11:35:07.441"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL LOGIN}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20230303 11:35:07.447" level="INFO">Current location is 'https://katalon-demo-cura.herokuapp.com/profile.php#login'.</msg>
+<status status="PASS" starttime="20230303 11:35:07.441" endtime="20230303 11:35:07.447"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>CURA Healthcare Service</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230303 11:35:07.457" level="INFO">Page title is 'CURA Healthcare Service'.</msg>
+<status status="PASS" starttime="20230303 11:35:07.447" endtime="20230303 11:35:07.457"/>
+</kw>
+<status status="PASS" starttime="20230303 11:35:04.156" endtime="20230303 11:35:07.457"/>
+</kw>
+<kw name="Input Incorrect Username" library="resource-app">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:txt-username</arg>
+<arg>binh</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230303 11:35:07.458" level="INFO">Typing text 'binh' into text field 'id:txt-username'.</msg>
+<status status="PASS" starttime="20230303 11:35:07.458" endtime="20230303 11:35:07.598"/>
+</kw>
+<status status="PASS" starttime="20230303 11:35:07.457" endtime="20230303 11:35:07.599"/>
+</kw>
+<kw name="Input Correct Password" library="resource-app">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:txt-password</arg>
+<arg>${valid password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230303 11:35:07.601" level="INFO">Typing text 'ThisIsNotAPassword' into text field 'id:txt-password'.</msg>
+<status status="PASS" starttime="20230303 11:35:07.600" endtime="20230303 11:35:07.714"/>
+</kw>
+<status status="PASS" starttime="20230303 11:35:07.599" endtime="20230303 11:35:07.714"/>
+</kw>
+<kw name="Submit Login" library="resource-app">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:btn-login</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230303 11:35:07.715" level="INFO">Clicking button 'id:btn-login'.</msg>
+<status status="PASS" starttime="20230303 11:35:07.714" endtime="20230303 11:35:08.022"/>
+</kw>
+<status status="PASS" starttime="20230303 11:35:07.714" endtime="20230303 11:35:08.022"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230303 11:35:08.022" endtime="20230303 11:35:08.199"/>
+</kw>
+<status status="PASS" starttime="20230303 11:35:00.616" endtime="20230303 11:35:08.200"/>
+</test>
+<test id="s1-t3" name="Submit login with wrong password" line="32">
+<kw name="Open Browser To Home Page" library="resource-app">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL CURA}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230303 11:35:08.203" level="INFO">Opening browser 'Chrome' to base url 'https://katalon-demo-cura.herokuapp.com/'.</msg>
+<status status="PASS" starttime="20230303 11:35:08.202" endtime="20230303 11:35:11.063"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230303 11:35:11.064" endtime="20230303 11:35:11.472"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230303 11:35:11.472" endtime="20230303 11:35:11.473"/>
+</kw>
+<status status="PASS" starttime="20230303 11:35:08.201" endtime="20230303 11:35:11.473"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>timeout = 5</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20230303 11:35:11.473" endtime="20230303 11:35:11.488"/>
+</kw>
+<kw name="Open LogIn Page" library="resource-app">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="menu-toggle"]/i</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230303 11:35:11.489" level="INFO">Clicking element '//*[@id="menu-toggle"]/i'.</msg>
+<status status="PASS" starttime="20230303 11:35:11.489" endtime="20230303 11:35:11.532"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230303 11:35:14.534" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230303 11:35:11.532" endtime="20230303 11:35:14.534"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="sidebar-wrapper"]/ul/li[3]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230303 11:35:14.535" level="INFO">Clicking element '//*[@id="sidebar-wrapper"]/ul/li[3]/a'.</msg>
+<status status="PASS" starttime="20230303 11:35:14.534" endtime="20230303 11:35:14.770"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL LOGIN}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20230303 11:35:14.777" level="INFO">Current location is 'https://katalon-demo-cura.herokuapp.com/profile.php#login'.</msg>
+<status status="PASS" starttime="20230303 11:35:14.771" endtime="20230303 11:35:14.777"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>CURA Healthcare Service</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230303 11:35:14.783" level="INFO">Page title is 'CURA Healthcare Service'.</msg>
+<status status="PASS" starttime="20230303 11:35:14.777" endtime="20230303 11:35:14.784"/>
+</kw>
+<status status="PASS" starttime="20230303 11:35:11.488" endtime="20230303 11:35:14.784"/>
+</kw>
+<kw name="Input Correct Username" library="resource-app">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:txt-username</arg>
+<arg>${valid username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230303 11:35:14.785" level="INFO">Typing text 'John Doe' into text field 'id:txt-username'.</msg>
+<status status="PASS" starttime="20230303 11:35:14.784" endtime="20230303 11:35:14.934"/>
+</kw>
+<status status="PASS" starttime="20230303 11:35:14.784" endtime="20230303 11:35:14.934"/>
+</kw>
+<kw name="Input Incorrect Password" library="resource-app">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:txt-password</arg>
+<arg>binh123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230303 11:35:14.935" level="INFO">Typing text 'binh123' into text field 'id:txt-password'.</msg>
+<status status="PASS" starttime="20230303 11:35:14.935" endtime="20230303 11:35:15.043"/>
+</kw>
+<status status="PASS" starttime="20230303 11:35:14.934" endtime="20230303 11:35:15.043"/>
+</kw>
+<kw name="Submit Login" library="resource-app">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:btn-login</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230303 11:35:15.044" level="INFO">Clicking button 'id:btn-login'.</msg>
+<status status="PASS" starttime="20230303 11:35:15.044" endtime="20230303 11:35:15.342"/>
+</kw>
+<status status="PASS" starttime="20230303 11:35:15.043" endtime="20230303 11:35:15.342"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230303 11:35:15.343" endtime="20230303 11:35:15.459"/>
+</kw>
+<status status="PASS" starttime="20230303 11:35:08.201" endtime="20230303 11:35:15.460"/>
+</test>
+<test id="s1-t4" name="Submit login without username" line="42">
+<kw name="Open Browser To Home Page" library="resource-app">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL CURA}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230303 11:35:15.465" level="INFO">Opening browser 'Chrome' to base url 'https://katalon-demo-cura.herokuapp.com/'.</msg>
+<status status="PASS" starttime="20230303 11:35:15.463" endtime="20230303 11:35:18.331"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230303 11:35:18.331" endtime="20230303 11:35:18.746"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230303 11:35:18.746" endtime="20230303 11:35:18.746"/>
+</kw>
+<status status="PASS" starttime="20230303 11:35:15.463" endtime="20230303 11:35:18.747"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>timeout = 5</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20230303 11:35:18.747" endtime="20230303 11:35:18.760"/>
+</kw>
+<kw name="Open LogIn Page" library="resource-app">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="menu-toggle"]/i</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230303 11:35:18.761" level="INFO">Clicking element '//*[@id="menu-toggle"]/i'.</msg>
+<status status="PASS" starttime="20230303 11:35:18.760" endtime="20230303 11:35:18.803"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230303 11:35:21.805" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230303 11:35:18.804" endtime="20230303 11:35:21.806"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="sidebar-wrapper"]/ul/li[3]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230303 11:35:21.807" level="INFO">Clicking element '//*[@id="sidebar-wrapper"]/ul/li[3]/a'.</msg>
+<status status="PASS" starttime="20230303 11:35:21.806" endtime="20230303 11:35:22.043"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL LOGIN}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20230303 11:35:22.051" level="INFO">Current location is 'https://katalon-demo-cura.herokuapp.com/profile.php#login'.</msg>
+<status status="PASS" starttime="20230303 11:35:22.043" endtime="20230303 11:35:22.051"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>CURA Healthcare Service</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230303 11:35:22.056" level="INFO">Page title is 'CURA Healthcare Service'.</msg>
+<status status="PASS" starttime="20230303 11:35:22.051" endtime="20230303 11:35:22.056"/>
+</kw>
+<status status="PASS" starttime="20230303 11:35:18.760" endtime="20230303 11:35:22.056"/>
+</kw>
+<kw name="Input Correct Password" library="resource-app">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:txt-password</arg>
+<arg>${valid password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230303 11:35:22.057" level="INFO">Typing text 'ThisIsNotAPassword' into text field 'id:txt-password'.</msg>
+<status status="PASS" starttime="20230303 11:35:22.057" endtime="20230303 11:35:22.212"/>
+</kw>
+<status status="PASS" starttime="20230303 11:35:22.056" endtime="20230303 11:35:22.213"/>
+</kw>
+<kw name="Submit Login" library="resource-app">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:btn-login</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230303 11:35:22.214" level="INFO">Clicking button 'id:btn-login'.</msg>
+<status status="PASS" starttime="20230303 11:35:22.213" endtime="20230303 11:35:22.520"/>
+</kw>
+<status status="PASS" starttime="20230303 11:35:22.213" endtime="20230303 11:35:22.520"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230303 11:35:22.521" endtime="20230303 11:35:22.643"/>
+</kw>
+<status status="PASS" starttime="20230303 11:35:15.462" endtime="20230303 11:35:22.643"/>
+</test>
+<test id="s1-t5" name="Submit login without password" line="51">
+<kw name="Open Browser To Home Page" library="resource-app">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL CURA}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230303 11:35:22.648" level="INFO">Opening browser 'Chrome' to base url 'https://katalon-demo-cura.herokuapp.com/'.</msg>
+<status status="PASS" starttime="20230303 11:35:22.647" endtime="20230303 11:35:25.497"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230303 11:35:25.498" endtime="20230303 11:35:25.906"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230303 11:35:25.906" endtime="20230303 11:35:25.907"/>
+</kw>
+<status status="PASS" starttime="20230303 11:35:22.646" endtime="20230303 11:35:25.907"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>timeout = 5</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20230303 11:35:25.907" endtime="20230303 11:35:25.920"/>
+</kw>
+<kw name="Open LogIn Page" library="resource-app">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="menu-toggle"]/i</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230303 11:35:25.921" level="INFO">Clicking element '//*[@id="menu-toggle"]/i'.</msg>
+<status status="PASS" starttime="20230303 11:35:25.921" endtime="20230303 11:35:25.977"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230303 11:35:28.979" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230303 11:35:25.977" endtime="20230303 11:35:28.979"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="sidebar-wrapper"]/ul/li[3]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230303 11:35:28.980" level="INFO">Clicking element '//*[@id="sidebar-wrapper"]/ul/li[3]/a'.</msg>
+<status status="PASS" starttime="20230303 11:35:28.980" endtime="20230303 11:35:29.219"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL LOGIN}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20230303 11:35:29.223" level="INFO">Current location is 'https://katalon-demo-cura.herokuapp.com/profile.php#login'.</msg>
+<status status="PASS" starttime="20230303 11:35:29.219" endtime="20230303 11:35:29.223"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>CURA Healthcare Service</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230303 11:35:29.231" level="INFO">Page title is 'CURA Healthcare Service'.</msg>
+<status status="PASS" starttime="20230303 11:35:29.223" endtime="20230303 11:35:29.231"/>
+</kw>
+<status status="PASS" starttime="20230303 11:35:25.920" endtime="20230303 11:35:29.231"/>
+</kw>
+<kw name="Input Correct Username" library="resource-app">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:txt-username</arg>
+<arg>${valid username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230303 11:35:29.233" level="INFO">Typing text 'John Doe' into text field 'id:txt-username'.</msg>
+<status status="PASS" starttime="20230303 11:35:29.232" endtime="20230303 11:35:29.375"/>
+</kw>
+<status status="PASS" starttime="20230303 11:35:29.232" endtime="20230303 11:35:29.375"/>
+</kw>
+<kw name="Submit Login" library="resource-app">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:btn-login</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230303 11:35:29.377" level="INFO">Clicking button 'id:btn-login'.</msg>
+<status status="PASS" starttime="20230303 11:35:29.376" endtime="20230303 11:35:29.668"/>
+</kw>
+<status status="PASS" starttime="20230303 11:35:29.376" endtime="20230303 11:35:29.668"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230303 11:35:29.669" endtime="20230303 11:35:29.870"/>
+</kw>
+<status status="PASS" starttime="20230303 11:35:22.646" endtime="20230303 11:35:29.871"/>
+</test>
+<test id="s1-t6" name="Page Appointment" line="60">
+<kw name="Open Browser To Home Page" library="resource-app">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL CURA}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230303 11:35:29.873" level="INFO">Opening browser 'Chrome' to base url 'https://katalon-demo-cura.herokuapp.com/'.</msg>
+<status status="PASS" starttime="20230303 11:35:29.872" endtime="20230303 11:35:32.707"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230303 11:35:32.708" endtime="20230303 11:35:33.122"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230303 11:35:33.122" endtime="20230303 11:35:33.123"/>
+</kw>
+<status status="PASS" starttime="20230303 11:35:29.872" endtime="20230303 11:35:33.123"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>timeout = 5</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20230303 11:35:33.123" endtime="20230303 11:35:33.135"/>
+</kw>
+<kw name="Open LogIn Page" library="resource-app">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="menu-toggle"]/i</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230303 11:35:33.137" level="INFO">Clicking element '//*[@id="menu-toggle"]/i'.</msg>
+<status status="PASS" starttime="20230303 11:35:33.136" endtime="20230303 11:35:33.182"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230303 11:35:36.185" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230303 11:35:33.183" endtime="20230303 11:35:36.185"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="sidebar-wrapper"]/ul/li[3]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230303 11:35:36.186" level="INFO">Clicking element '//*[@id="sidebar-wrapper"]/ul/li[3]/a'.</msg>
+<status status="PASS" starttime="20230303 11:35:36.185" endtime="20230303 11:35:36.420"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL LOGIN}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20230303 11:35:36.425" level="INFO">Current location is 'https://katalon-demo-cura.herokuapp.com/profile.php#login'.</msg>
+<status status="PASS" starttime="20230303 11:35:36.421" endtime="20230303 11:35:36.425"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>CURA Healthcare Service</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230303 11:35:36.431" level="INFO">Page title is 'CURA Healthcare Service'.</msg>
+<status status="PASS" starttime="20230303 11:35:36.425" endtime="20230303 11:35:36.431"/>
+</kw>
+<status status="PASS" starttime="20230303 11:35:33.135" endtime="20230303 11:35:36.431"/>
+</kw>
+<kw name="Input Correct Username" library="resource-app">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:txt-username</arg>
+<arg>${valid username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230303 11:35:36.432" level="INFO">Typing text 'John Doe' into text field 'id:txt-username'.</msg>
+<status status="PASS" starttime="20230303 11:35:36.431" endtime="20230303 11:35:36.579"/>
+</kw>
+<status status="PASS" starttime="20230303 11:35:36.431" endtime="20230303 11:35:36.580"/>
+</kw>
+<kw name="Input Correct Password" library="resource-app">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:txt-password</arg>
+<arg>${valid password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230303 11:35:36.582" level="INFO">Typing text 'ThisIsNotAPassword' into text field 'id:txt-password'.</msg>
+<status status="PASS" starttime="20230303 11:35:36.581" endtime="20230303 11:35:36.712"/>
+</kw>
+<status status="PASS" starttime="20230303 11:35:36.580" endtime="20230303 11:35:36.712"/>
+</kw>
+<kw name="Submit Login" library="resource-app">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:btn-login</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230303 11:35:36.714" level="INFO">Clicking button 'id:btn-login'.</msg>
+<status status="PASS" starttime="20230303 11:35:36.713" endtime="20230303 11:35:37.009"/>
+</kw>
+<status status="PASS" starttime="20230303 11:35:36.712" endtime="20230303 11:35:37.009"/>
+</kw>
+<kw name="Appointment Page Should Be Open" library="resource-app">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL APPOINTMENT}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20230303 11:35:37.052" level="INFO">Current location is 'https://katalon-demo-cura.herokuapp.com/#appointment'.</msg>
+<status status="PASS" starttime="20230303 11:35:37.010" endtime="20230303 11:35:37.052"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>CURA Healthcare Service</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230303 11:35:37.057" level="INFO">Page title is 'CURA Healthcare Service'.</msg>
+<status status="PASS" starttime="20230303 11:35:37.052" endtime="20230303 11:35:37.057"/>
+</kw>
+<status status="PASS" starttime="20230303 11:35:37.010" endtime="20230303 11:35:37.057"/>
+</kw>
+<kw name="Make an Appointment" library="resource-app">
+<kw name="Get Selected List Label" library="SeleniumLibrary">
+<arg>id:combo_facility</arg>
+<doc>Returns the label of selected option from selection list ``locator``.</doc>
+<status status="PASS" starttime="20230303 11:35:37.057" endtime="20230303 11:35:37.122"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>id:chk_hospotal_readmission</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<msg timestamp="20230303 11:35:37.122" level="INFO">Selecting checkbox 'id:chk_hospotal_readmission'.</msg>
+<status status="PASS" starttime="20230303 11:35:37.122" endtime="20230303 11:35:37.190"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="txt_visit_date"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230303 11:35:37.190" level="INFO">Clicking element '//*[@id="txt_visit_date"]'.</msg>
+<status status="PASS" starttime="20230303 11:35:37.190" endtime="20230303 11:35:37.258"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/div/div[1]/table/tbody/tr[5]/td[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230303 11:35:37.259" level="INFO">Clicking element 'xpath:/html/body/div/div[1]/table/tbody/tr[5]/td[1]'.</msg>
+<status status="PASS" starttime="20230303 11:35:37.259" endtime="20230303 11:35:37.307"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:txt_comment</arg>
+<arg>NO COMMENT</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230303 11:35:37.308" level="INFO">Typing text 'NO COMMENT' into text field 'id:txt_comment'.</msg>
+<status status="PASS" starttime="20230303 11:35:37.307" endtime="20230303 11:35:37.379"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:btn-book-appointment</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230303 11:35:37.380" level="INFO">Clicking button 'id:btn-book-appointment'.</msg>
+<status status="PASS" starttime="20230303 11:35:37.379" endtime="20230303 11:35:37.556"/>
+</kw>
+<status status="PASS" starttime="20230303 11:35:37.057" endtime="20230303 11:35:37.556"/>
+</kw>
+<status status="PASS" starttime="20230303 11:35:29.871" endtime="20230303 11:35:37.556"/>
+</test>
+<test id="s1-t7" name="Log Out" line="75">
+<kw name="Open Browser To Home Page" library="resource-app">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL CURA}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230303 11:35:37.559" level="INFO">Opening browser 'Chrome' to base url 'https://katalon-demo-cura.herokuapp.com/'.</msg>
+<status status="PASS" starttime="20230303 11:35:37.558" endtime="20230303 11:35:40.311"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230303 11:35:40.311" endtime="20230303 11:35:40.748"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230303 11:35:40.749" endtime="20230303 11:35:40.750"/>
+</kw>
+<status status="PASS" starttime="20230303 11:35:37.558" endtime="20230303 11:35:40.750"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>timeout = 5</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20230303 11:35:40.751" endtime="20230303 11:35:40.763"/>
+</kw>
+<kw name="Open LogIn Page" library="resource-app">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="menu-toggle"]/i</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230303 11:35:40.765" level="INFO">Clicking element '//*[@id="menu-toggle"]/i'.</msg>
+<status status="PASS" starttime="20230303 11:35:40.764" endtime="20230303 11:35:40.811"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230303 11:35:43.813" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230303 11:35:40.812" endtime="20230303 11:35:43.814"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="sidebar-wrapper"]/ul/li[3]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230303 11:35:43.815" level="INFO">Clicking element '//*[@id="sidebar-wrapper"]/ul/li[3]/a'.</msg>
+<status status="PASS" starttime="20230303 11:35:43.814" endtime="20230303 11:35:44.077"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL LOGIN}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20230303 11:35:44.085" level="INFO">Current location is 'https://katalon-demo-cura.herokuapp.com/profile.php#login'.</msg>
+<status status="PASS" starttime="20230303 11:35:44.078" endtime="20230303 11:35:44.085"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>CURA Healthcare Service</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230303 11:35:44.089" level="INFO">Page title is 'CURA Healthcare Service'.</msg>
+<status status="PASS" starttime="20230303 11:35:44.085" endtime="20230303 11:35:44.089"/>
+</kw>
+<status status="PASS" starttime="20230303 11:35:40.763" endtime="20230303 11:35:44.089"/>
+</kw>
+<kw name="Input Correct Username" library="resource-app">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:txt-username</arg>
+<arg>${valid username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230303 11:35:44.091" level="INFO">Typing text 'John Doe' into text field 'id:txt-username'.</msg>
+<status status="PASS" starttime="20230303 11:35:44.090" endtime="20230303 11:35:44.335"/>
+</kw>
+<status status="PASS" starttime="20230303 11:35:44.090" endtime="20230303 11:35:44.336"/>
+</kw>
+<kw name="Input Correct Password" library="resource-app">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:txt-password</arg>
+<arg>${valid password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230303 11:35:44.337" level="INFO">Typing text 'ThisIsNotAPassword' into text field 'id:txt-password'.</msg>
+<status status="PASS" starttime="20230303 11:35:44.336" endtime="20230303 11:35:44.459"/>
+</kw>
+<status status="PASS" starttime="20230303 11:35:44.336" endtime="20230303 11:35:44.460"/>
+</kw>
+<kw name="Submit Login" library="resource-app">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:btn-login</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230303 11:35:44.462" level="INFO">Clicking button 'id:btn-login'.</msg>
+<status status="PASS" starttime="20230303 11:35:44.461" endtime="20230303 11:35:44.803"/>
+</kw>
+<status status="PASS" starttime="20230303 11:35:44.460" endtime="20230303 11:35:44.803"/>
+</kw>
+<kw name="Submit Log Out" library="resource-app">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="menu-toggle"]/i</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230303 11:35:44.805" level="INFO">Clicking element '//*[@id="menu-toggle"]/i'.</msg>
+<status status="PASS" starttime="20230303 11:35:44.804" endtime="20230303 11:35:44.951"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="sidebar-wrapper"]/ul/li[5]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230303 11:35:44.952" level="INFO">Clicking element '//*[@id="sidebar-wrapper"]/ul/li[5]/a'.</msg>
+<status status="PASS" starttime="20230303 11:35:44.951" endtime="20230303 11:35:45.241"/>
+</kw>
+<status status="PASS" starttime="20230303 11:35:44.803" endtime="20230303 11:35:45.242"/>
+</kw>
+<status status="PASS" starttime="20230303 11:35:37.557" endtime="20230303 11:35:45.242"/>
 </test>
 <doc>A test suite with a single test for valid login.
 
 This test has a workflow that is created using keywords in
 the imported resource file.</doc>
-<status status="PASS" starttime="20230302 17:51:00.591" endtime="20230302 17:51:10.557"/>
+<status status="PASS" starttime="20230303 11:34:52.673" endtime="20230303 11:35:45.246"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="7" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Contactus">Contactus</stat>
+<stat pass="7" fail="0" skip="0" id="s1" name="App">App</stat>
 </suite>
 </statistics>
 <errors>

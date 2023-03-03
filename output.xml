@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.8.5 on darwin)" generated="20230303 11:27:47.980" rpa="false" schemaversion="3">
+<suite id="s1" name="App" source="/Users/thanhbinh/Documents/DeVops/24:02 Robot framework/TP/TP-RobotFramework/TP RobotFramework/appointment/app.robot">
+<test id="s1-t1" name="Log Out" line="72">
+<kw name="Open Browser To Home Page" library="resource-app">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL CURA}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230303 11:27:48.311" level="INFO">Opening browser 'Chrome' to base url 'https://katalon-demo-cura.herokuapp.com/'.</msg>
+<status status="PASS" starttime="20230303 11:27:48.310" endtime="20230303 11:27:52.163"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230303 11:27:52.163" endtime="20230303 11:27:52.590"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230303 11:27:52.591" endtime="20230303 11:27:52.593"/>
+</kw>
+<status status="PASS" starttime="20230303 11:27:48.308" endtime="20230303 11:27:52.593"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>timeout = 5</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20230303 11:27:52.594" endtime="20230303 11:27:52.635"/>
+</kw>
+<kw name="Open LogIn Page" library="resource-app">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="menu-toggle"]/i</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230303 11:27:52.637" level="INFO">Clicking element '//*[@id="menu-toggle"]/i'.</msg>
+<status status="PASS" starttime="20230303 11:27:52.637" endtime="20230303 11:27:52.738"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230303 11:27:55.740" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230303 11:27:52.738" endtime="20230303 11:27:55.740"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="sidebar-wrapper"]/ul/li[3]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230303 11:27:55.741" level="INFO">Clicking element '//*[@id="sidebar-wrapper"]/ul/li[3]/a'.</msg>
+<status status="PASS" starttime="20230303 11:27:55.740" endtime="20230303 11:27:56.010"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL LOGIN}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20230303 11:27:56.021" level="INFO">Current location is 'https://katalon-demo-cura.herokuapp.com/profile.php#login'.</msg>
+<status status="PASS" starttime="20230303 11:27:56.010" endtime="20230303 11:27:56.022"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>CURA Healthcare Service</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230303 11:27:56.035" level="INFO">Page title is 'CURA Healthcare Service'.</msg>
+<status status="PASS" starttime="20230303 11:27:56.022" endtime="20230303 11:27:56.035"/>
+</kw>
+<status status="PASS" starttime="20230303 11:27:52.636" endtime="20230303 11:27:56.035"/>
+</kw>
+<kw name="Input Correct Username" library="resource-app">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:txt-username</arg>
+<arg>${valid username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230303 11:27:56.039" level="INFO">Typing text 'John Doe' into text field 'id:txt-username'.</msg>
+<status status="PASS" starttime="20230303 11:27:56.037" endtime="20230303 11:27:56.213"/>
+</kw>
+<status status="PASS" starttime="20230303 11:27:56.037" endtime="20230303 11:27:56.214"/>
+</kw>
+<kw name="Input Correct Password" library="resource-app">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:txt-password</arg>
+<arg>${valid password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230303 11:27:56.218" level="INFO">Typing text 'ThisIsNotAPassword' into text field 'id:txt-password'.</msg>
+<status status="PASS" starttime="20230303 11:27:56.216" endtime="20230303 11:27:56.362"/>
+</kw>
+<status status="PASS" starttime="20230303 11:27:56.215" endtime="20230303 11:27:56.362"/>
+</kw>
+<kw name="Submit Login" library="resource-app">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:btn-login</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230303 11:27:56.366" level="INFO">Clicking button 'id:btn-login'.</msg>
+<status status="PASS" starttime="20230303 11:27:56.363" endtime="20230303 11:27:56.678"/>
+</kw>
+<status status="PASS" starttime="20230303 11:27:56.363" endtime="20230303 11:27:56.679"/>
+</kw>
+<kw name="Submit Log Out" library="resource-app">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="menu-toggle"]/i</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230303 11:27:56.682" level="INFO">Clicking element '//*[@id="menu-toggle"]/i'.</msg>
+<status status="PASS" starttime="20230303 11:27:56.681" endtime="20230303 11:27:56.793"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="sidebar-wrapper"]/ul/li[5]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230303 11:27:56.794" level="INFO">Clicking element '//*[@id="sidebar-wrapper"]/ul/li[5]/a'.</msg>
+<status status="PASS" starttime="20230303 11:27:56.794" endtime="20230303 11:27:57.133"/>
+</kw>
+<status status="PASS" starttime="20230303 11:27:56.680" endtime="20230303 11:27:57.134"/>
+</kw>
+<status status="PASS" starttime="20230303 11:27:48.304" endtime="20230303 11:27:57.135"/>
+</test>
+<doc>A test suite with a single test for valid login.
+
+This test has a workflow that is created using keywords in
+the imported resource file.</doc>
+<status status="PASS" starttime="20230303 11:27:47.985" endtime="20230303 11:27:57.137"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="App">App</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -48,6 +48,11 @@ Home Page Should Be Open
     Location Should Be    ${URL HOMEPAGE}
     Title Should Be    OrangeHRM
 
+Check NavBar
+    Element Text Should Be    //*[@id="app"]/div[1]/div[1]/aside/nav/div[2]/ul/li[1]/a/span    Admin
+    Element Text Should Be    //*[@id="app"]/div[1]/div[1]/aside/nav/div[2]/ul/li[2]/a    PIM
+    Element Text Should Be    //*[@id="app"]/div[1]/div[1]/aside/nav/div[2]/ul/li[8]/a/span    Dashboard
+
 NavBar Admin    
     
     Click Element   //*[@id="app"]/div[1]/div[1]/aside/nav/div[2]/ul/li[1]/a/span
@@ -65,13 +70,21 @@ Add Employee
     
 
     Sleep    10
-    Element Should Be Visible    class:oxd-button oxd-button--medium oxd-button--secondary    timeout = 10
-    Click Button    xpath:/html/body/div/div[1]/div[2]/div[2]/div/div[2]/div[1]/button
+    # Element Should Be Visible    class:oxd-button oxd-button--medium oxd-button--secondary    timeout = 10
+    
+    # Click Button    xpath:/html/body/div/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[2]/button[2]
+
+    Click Element    //*[@id="app"]/div[1]/div[1]/header/div[2]/nav/ul/li[3]/a
+
+    Location Should Be    https://opensource-demo.orangehrmlive.com/web/index.php/pim/addEmployee
+
+    Sleep    10
+    # Click Button    xpath:/html/body/div/div[1]/div[2]/div[2]/div/div[2]/div[1]/button
     # Click Button    //button[@value = "Add"]
 
-    Input Text    name:firstname    Alten
-    Input Text    name:middlename    Societe
-    Input Text    name:lastname    FRANCE
+    Input Text    name:firstName    Alten
+    Input Text    name:middleName    Societe
+    Input Text    name:lastName    FRANCE
 
     Input Text    //*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div[2]/div[1]/div[2]/div/div/div[2]/input    35000
     Click Button    //*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[2]/button[2]
