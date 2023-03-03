@@ -63,9 +63,16 @@ NavBar Log Out
 Add Employee
     Location Should Be    https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewEmployeeList
     
-    Click Button    //button[@value = "Add"]
+
+    Sleep    10
+    Element Should Be Visible    class:oxd-button oxd-button--medium oxd-button--secondary    timeout = 10
+    Click Button    xpath:/html/body/div/div[1]/div[2]/div[2]/div/div[2]/div[1]/button
+    # Click Button    //button[@value = "Add"]
+
     Input Text    name:firstname    Alten
     Input Text    name:middlename    Societe
     Input Text    name:lastname    FRANCE
+
     Input Text    //*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div[2]/div[1]/div[2]/div/div/div[2]/input    35000
     Click Button    //*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[2]/button[2]
+    

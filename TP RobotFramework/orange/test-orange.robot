@@ -65,7 +65,7 @@ Dashboard Admin
 
     Close Browser
 
-Add Employee
+Add Employee in Page PIM
     Open Browser To Login Page   
     Wait Until Element Is Not Visible    timeout = 5
     Input Username
@@ -76,6 +76,8 @@ Add Employee
     
     NavBar PIM
     Wait Until Element Is Not Visible    timeout = 5
+
+    Add Employee
 
     Close Browser
 
